@@ -1,0 +1,921 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.float {
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    align-content: end;
+    text-align: right;
+    z-index: 1000;
+}
+
+.float img {
+    box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.904);
+    border-radius: 100%;
+    background: white;
+}
+
+.float img:hover {
+    box-shadow: 1px 2px 5px rgba(209, 20, 6, 0.514);
+    transform: scale(1.1);
+    transition: .2s;
+    border-radius: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.header .navigation ul li {
+    float: left;
+    position: relative;
+}
+
+.header .navigation ul li a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 18px 10px;
+    display: block;
+    transition: all .2s ease;
+}
+
+.header .navigation ul li a:hover {
+    background-color: darkgrey;
+    color: black;
+    font-weight: bold;
+}
+
+.header .navigation ul li ul {
+    position: absolute;
+    right: o;
+    width: 300px;
+    background-color: rgb(43, 43, 43);
+    display: none;
+}
+
+.header .navigation ul li ul li a {
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.header .navigation ul li ul li ul {
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+
+.header .navigation ul li ul li {
+    width: 100%;
+}
+
+.header .navigation ul li:hover > ul {
+    display: initial;
+}
+
+#toggle,
+.header label {
+    display: none;
+    cursor: pointer;
+}
+
+.menu {
+    width: 45px;
+    height: 45px;
+}
+
+@media(max-width:950px) {
+    .header label {
+        display: initial;
+    }
+
+    .header {
+        padding: 10px 7%;
+    }
+
+    .header .navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: black;
+        display: none;
+    }
+
+    .header .navigation ul li {
+        width: 100%;
+    }
+
+    .header .navigation ul li a {
+        padding: 10px 15px 5%;
+    }
+
+    .header .navigation ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .header .navigation ul li ul li {
+        background-color: black;
+    }
+
+    .header .navigation ul li ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    #toggle:checked ~ .navigation {
+        display: block;
+    }
+}
+
+
+.contenido {
+    display: flex;
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+}
+
+.buttons {
+    margin: auto;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+
+.contentdos{
+    text-align: center;
+    padding: 45px 70px;
+}
+
+.doscolumnas {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+button {
+    position: relative;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background: black;
+    color: darkgray;
+    cursor: pointer;
+    overflow: hidden;
+    width: 150px;
+    margin: 25px;
+}
+
+button:hover {
+    color: red;
+}
+
+button span {
+    position: absolute;
+    background: red;
+    transition: .5s;
+}
+
+button span:nth-child(1) {
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: -100%;
+}
+
+button span:nth-child(2) {
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    right: -100%;
+}
+
+button span:nth-child(3) {
+    width: 2px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+}
+
+button span:nth-child(4) {
+    width: 2px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+}
+
+button:hover span:nth-child(1) {
+    left: 0;
+}
+
+button:hover span:nth-child(2) {
+    right: 0;
+}
+
+button:hover span:nth-child(3) {
+    bottom: 0;
+}
+
+button:hover span:nth-child(4) {
+    top: 0;
+}
+
+.doscolumnas {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    position: relative;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background: black;
+    color: darkgray;
+    cursor: pointer;
+    overflow: hidden;
+    width: 150px;
+    margin: 25px;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+button:hover {
+    color: white;
+}
+
+button span {
+    position: absolute;
+    background: red;
+    transition: .5s;
+}
+
+button span:nth-child(1) {
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: -100%;
+}
+
+button span:nth-child(2) {
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    right: -100%;
+}
+
+button span:nth-child(3) {
+    width: 2px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+}
+
+button span:nth-child(4) {
+    width: 2px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+}
+
+button:hover span:nth-child(1) {
+    left: 0;
+}
+
+button:hover span:nth-child(2) {
+    right: 0;
+}
+
+button:hover span:nth-child(3) {
+    bottom: 0;
+}
+
+button:hover span:nth-child(4) {
+    top: 0;
+}
+
+.contenedordos {
+    display: flex; 
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-flow: wrap;  
+    box-shadow: 0px 1px 8px; 
+}
+
+.contenedordos .ladouno {
+    text-align: center;
+    padding: 35px;
+    width: 50%;
+    align-content: center;
+}
+
+.contenedordos .ladouno img {
+    padding: 15px;
+}
+
+.contenedordos .ladouno button {
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px;
+}
+
+.contenedordos .ladouno button a {
+    text-decoration: none;
+    color: white;
+}
+
+.contenedordos .ladouno button:hover {
+    background-color: brown;
+}
+
+.contenedordos .ladodos {
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width:1920px) {
+    .contenedordos .ladouno {
+        width: 35%;
+    }
+    .contenedordos .ladodos {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:854px) {
+    .contenedordos .ladouno {
+        width: 65%;
+    }
+    .contenedordos .ladodos {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .contenedordos .ladouno {
+        width: 100%;
+    }
+    .contenedordos .ladodos {
+        width: 100%;
+    }
+}
+                                
+.tarjetas {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+
+.card {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card .textos {
+    padding: 20px;
+    text-align: center;
+}
+
+.card .textos a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    width: 170px;
+}
+
+.card .textos a:hover {
+    background-color: brown;
+}
+
+@media screen and (max-width: 1900px){
+    .card {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .card {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .card {
+        width: 90%;
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.popup {
+    position: relative;
+    min-height: 100vh;
+    background-color: #e7e7e7;
+}
+
+.popup .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.popup .image-container .image {
+    height: 350px;
+    width: 350px;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.popup .image-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 1s linear;
+}
+
+.popup .image-container .image:hover img{
+    transform: scale(1.1);
+}
+
+.popup .popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup .popup-image .span {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.popup .popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 550px;
+    object-fit: cover;
+}
+
+@media screen and (max-width:768px) {
+    .popup .popup-image img{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:568px) {
+    .popup .popup-image img{
+        width: 10%;
+        display: flex;
+    }
+}
+
+.contenedortres {
+    display: flex; 
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-flow: wrap;  
+}
+
+.contenedortres .ladouno img{
+    width: 100%;
+    padding: 15px;
+}
+
+.contenedortres .ladodos {
+    width: 60%;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+}
+
+@media screen and (max-width:1920px) {
+    .contenedortres .ladouno {
+        width: 35%;
+    }
+    .contenedortres .ladodos {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:854px) {
+    .contenedortres .ladouno {
+        width: 55%;
+    }
+    .contenedortres .ladodos {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .contenedortres .ladouno {
+        width: 100%;
+    }
+    .contenedortres .ladodos {
+        width: 100%;
+    }
+}
+
+.pie-pagina {
+    width: 100%;
+    background-color: #0a141d;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1907px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+    text-align: center;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 350px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social img {
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 45px;
+    width: 50px;
+}
+
+.pie-pagina .grupo-1 .red-social img:hover {
+    transform: scale(1.1);
+    transition: .4s;
+    box-shadow: 1px 1px 7px;
+    border-radius: 100%;
+}
+
+.pie-pagina .grupo-2 {
+    text-align: center;
+    color: rgb(202, 202, 202);
+    padding: 20px;
+}
+
+@media screen and (max-width:1920px) {
+    .pie-pagina{
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width:854px) {
+    .pie-pagina{
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .pie-pagina{
+        width: 100%;
+    }
+}
+
+.banner {
+    background-image: url("../nosotros/imagenes nosotros/Banner quienes somos.jpg");
+    background-size: cover;
+    min-height: 100%;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.banner .contenidos {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.582);
+    margin: 40px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.contenedor-footer {
+    width: 95%;
+    display: flex;
+    padding: 20px;
+    margin: 10px;
+}
+
+.contenedor-footer .uno-footer {
+    width: 65%;
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    margin: 0px;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #0a141d;
+    margin: 2px;
+}
+
+.contenedor-footer .dos-footer {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contenedor-footer .dos-footer .icono-footer {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgba(163, 163, 163, 0.527);
+    padding: 1px;
+    text-align: center;
+    margin: 10px;
+}
+
+.contenedor-footer .dos-footer .icono-footer:hover {
+    transform: scale(1.1);
+}
+
+.contenedor-footer .dos-footer .desactivado {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgba(163, 163, 163, 0.171);
+    padding: 1px;
+    text-align: center;
+    margin: 10px;
+}
+
+.contenedorcuatro {
+    display: flex;
+    align-content: center;
+    padding: 40px;
+}
+
+.contenedorcuatro .ladouno {
+    width: 50%;
+    padding: 20px;
+}
+
+.contenedorcuatro .ladouno .selector .img_container {
+    width: 650px;
+    height: 650px;
+    margin-bottom: 20px;
+}
+
+.contenedorcuatro .ladouno .selector .img_container .main_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgb(99, 99, 99);
+    object-fit: cover;
+}
+
+.contenedorcuatro .ladouno .selector .thumbnail_container{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedorcuatro .ladouno .selector .thumbnail_container .thumbnail {
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    cursor: pointer;
+    object-fit: cover;
+    opacity: .7;
+    transition: 1s;
+    justify-content: center;
+}
+
+.contenedorcuatro .ladouno .selector .thumbnail_container .thumbnail:hover {
+    opacity: 1;
+}
+
+.active {
+    opacity: 1 !important;
+    box-shadow: 0px 5px 5px rgb(99, 99, 99);
+} 
+
+.contenedorcuatro .ladodos {
+    padding: 10px;
+    justify-content: flex-start;
+    width: 40%;
+    text-align: left;
+}
+
+.contenedorcuatro .ladodos h2 {
+    text-align: left;
+}
+
+.contenedorcuatro .ladodos p {
+    text-align: left;
+}
+
+.contactanos {
+    height: 100vh;
+    margin: 70px 150px;
+    display: flex;
+    box-shadow: 0px 5px 5px rgb(70, 69, 69);
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+
+.contactanos .segundo {
+    padding: 10px;
+}
+
+.contactanos .segundo h2 {
+    text-align: left;
+}
+
+.contactanos .segundo p {
+    text-align: left;
+}
+
+.contactanos .primero {
+    background-image: url("../contacto/contactanos.png");
+    background-size: cover;
+    height: 100vh;
+}
+
+
+form {
+    padding: 45px;
+    border-radius: 10px;
+    width: 70%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    padding: 10px 25px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    background-color: #e9e9e9ec;
+    border: 2px solid #f0faf1;
+    color: #0a141d;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #ebebeb00;
+}
+
+.btn {
+    font-size: 16px;
+    color: white;
+    border: 0;
+    border-radius: 25px;
+    background-color: brown;
+}
+
+@media screen and (max-width:1920px) {
+    .contactanos .primero {
+        width: 60%;
+    }
+    .contactanos .segundo {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:854px) {
+    .contactanos {
+        margin: 30px 20px;
+        height: auto;
+    }
+    .contactanos .primero {
+        width: 100vh;
+    }
+    .contactanos .segundo {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .contactanos {
+        margin: 30px 20px;
+        height: auto;
+    }
+    .contactanos .primero {
+        height: 50vh;
+        background-size: cover;
+    }
+    .contactanos .segundo {
+        width: 100%;
+        padding: 20px;
+    }
+}
